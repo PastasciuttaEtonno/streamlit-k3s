@@ -1,0 +1,14 @@
+.git
+.gitignore
+.vscode
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.env
+.DS_Store
+README.md
+LICENSE
+*.md
+.streamlit
