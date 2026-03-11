@@ -2,28 +2,6 @@
 
 Questo progetto contiene un'applicazione Streamlit containerizzata e configurata per il deployment su Kubernetes (K3s). Di seguito la descrizione dei componenti principali.
 
-## Struttura del Progetto
-
-### MyApp.py
-Application Streamlit principale molto semplice.
-
-## Build e Distribuzione
-
-### Build dell'immagine Docker
-```bash
-docker build -t <username>/streamlit-k3s:latest .
-```
-
-### Test locale
-```bash
-docker run -p 8501:8501 <username>/streamlit-k3s:latest
-```
-
-### Push su Docker Hub
-```bash
-docker login
-docker push <username>/streamlit-k3s:latest
-```
 
 ## Deployment su K3s
 
@@ -99,9 +77,6 @@ Una volta applicati i manifest, accedere all'applicazione:
 ```bash
 # Ottenere l'indirizzo IP esterno (EXTERNAL-IP)
 kubectl get service streamlit-service
-
-# L'applicazione sarà disponibile su http://<EXTERNAL-IP>
-# Se si usa LoadBalancer locale, potrebbe essere localhost o l'IP assegnato da K3s
 ```
 
 ### Gestione del Deployment
